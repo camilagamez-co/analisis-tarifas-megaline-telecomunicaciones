@@ -1,85 +1,54 @@
-# 📱 Análisis de Tarifas Megaline - Telecomunicaciones
+# 📊 Análisis de Rentabilidad de Tarifas Megaline
 
-Análisis estadístico de tarifas de telecomunicaciones Megaline: comparación de ingresos entre planes Surf y Ultimate. Incluye análisis de comportamiento de 500 clientes, cálculo de ingresos mensuales, pruebas de hipótesis estadísticas y análisis regional NY-NJ vs otras áreas.
+## 📋 Descripción del Proyecto
 
-🛠️ Tecnologías Utilizadas
-Python 3.8+
-Pandas
-Manipulación y análisis de datos
-NumPy
-Operaciones numéricas y estadísticas
-Matplotlib
-Visualización de datos
-Seaborn
-Visualizaciones estadísticas avanzadas
-SciPy
-Pruebas de hipótesis estadísticas
-Jupyter Notebook
-Entorno de desarrollo interactivo
-📋 Descripción del Proyecto
-Este proyecto analiza datos de la empresa de telecomunicaciones Megaline para determinar cuál de sus dos tarifas de prepago (Surf y Ultimate) genera más ingresos. El análisis incluye el comportamiento de 500 clientes durante 2018, cálculo de ingresos mensuales por cliente y pruebas estadísticas para validar hipótesis comerciales.
+Este proyecto analiza el comportamiento de usuarios y la rentabilidad de dos planes de tarifas de la empresa de telecomunicaciones **Megaline**: **Surf** y **Ultimate**. El objetivo principal es determinar cuál de los dos planes genera más ingresos para optimizar la asignación del presupuesto publicitario.
 
-### Objetivos principales:
-- Analizar el comportamiento de uso de clientes (llamadas, mensajes, datos)
-- Calcular ingresos mensuales por cliente según cada tarifa
-- Determinar qué tarifa genera más ingresos mediante análisis estadístico
-- Comparar ingresos entre regiones (NY-NJ vs otras áreas)
-- Realizar pruebas de hipótesis para validar conclusiones
+### 🎯 Objetivos
 
-### Tarifas analizadas:
-- Surf: $20/mes - 500 min, 50 SMS, 15 GB
-- Ultimate: $70/mes - 3000 min, 1000 SMS, 30 GB
+- Analizar patrones de consumo de 500 usuarios durante 2018
+- Comparar la rentabilidad entre los planes Surf y Ultimate  
+- Realizar pruebas estadísticas para validar diferencias significativas
+- Proporcionar recomendaciones estratégicas para el departamento comercial
 
-📊 Estructura de Datos
-El proyecto utiliza 3 datasets principales:
+### 📊 Datos Analizados
 
-megaline_calls.csv
-Registro de llamadas por cliente
-megaline_internet.csv
-Consumo de datos móviles
-megaline_messages.csv
-Registro de mensajes SMS
-megaline_plans.csv
-Información de tarifas
-megaline_users.csv
-Datos demográficos de usuarios (500 clientes)
-### Variables clave analizadas:
-- duration - Duración de llamadas (minutos)
-- mb_used - Consumo de datos (MB)
-- date - Fecha de uso del servicio
-- plan - Tipo de tarifa (Surf/Ultimate)
-- city - Ciudad del cliente
-- age - Edad del cliente
+- **500 usuarios** de Megaline
+- **Período**: Año 2018 completo
+- **Servicios**: Llamadas, SMS y tráfico de internet
+- **Planes**: Surf ($20/mes) y Ultimate ($70/mes)
 
-⚙️ Funcionalidades Implementadas
-### Preprocesamiento de Datos:
-- Limpieza y validación de datasets
-- Conversión de tipos de datos y fechas
-- Agregación de datos por cliente y mes
-- Cálculo de consumo mensual por servicio
+## ⚙️ Funcionalidades Implementadas
 
-### Análisis de Ingresos:
-- Cálculo de ingresos mensuales: Por cliente según tarifa contratada
-- Análisis de excesos: Cargos adicionales por sobrepasar límites
-- Estadística descriptiva: Media, mediana, varianza de ingresos
-- Segmentación: Análisis por tarifa y región
+### 🔍 Análisis Exploratorio de Datos
+- Limpieza y preparación de 5 tablas de datos interrelacionadas
+- Conversión de tipos de datos y manejo de valores faltantes
+- Aplicación de reglas de negocio específicas de Megaline (redondeo de minutos y GB)
 
-### Pruebas Estadísticas:
-- Prueba t de Student: Comparación de ingresos promedio entre tarifas
-- Prueba t de Student: Comparación NY-NJ vs otras regiones
-- Análisis de normalidad: Verificación de distribuciones
-- Intervalos de confianza: Para diferencias de medias
+### 📈 Análisis Estadístico Descriptivo
+- Cálculo de estadísticas por plan: media, varianza, desviación estándar
+- Análisis de distribuciones de consumo mensual
+- Identificación de patrones estacionales de uso
 
-### Visualizaciones:
-- **Histogramas de distribución de ingresos**
-- **Boxplots comparativos entre tarifas**
-- **Gráficos de barras de ingresos promedio**
-- **Visualizaciones de consumo por servicio (llamadas, SMS, datos)**
-- **Gráficos de dispersión para análisis de correlaciones**
+### 💰 Cálculo de Ingresos
+- Implementación de lógica de facturación por plan
+- Cálculo de cargos por excesos de límites incluidos
+- Agregación mensual de ingresos por usuario
+
+### 📊 Visualizaciones
+- Histogramas de distribución de consumo por servicio
+- Gráficos de barras comparativos entre planes
+- Diagramas de caja para análisis de variabilidad
+- Gráficos de ingresos mensuales y por usuario
+
+### 🧪 Pruebas de Hipótesis
+- **Hipótesis 1**: Comparación de ingresos promedio entre planes Surf y Ultimate
+- **Hipótesis 2**: Comparación de ingresos entre usuarios de NY-NJ vs otras regiones
+- Uso de t-tests bilaterales con nivel de significancia α = 0.05
 
 ## 🚀 Instalación y Uso
 
 ### Prerrequisitos
 ```bash
-Python 3.8+
-pip install pandas numpy matplotlib seaborn scipy jupyter
+Python 3.7+
+Jupyter Notebook
